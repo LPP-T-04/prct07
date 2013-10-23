@@ -29,4 +29,9 @@ describe Frac do
 			@f1.denom().should eq(1)		
 		end
 	end
+	describe "# se debe imprimir" do
+		it "numerador/denominador" do
+			@f1.to_s.should eq("1/1")
+		end
+	end
 end
