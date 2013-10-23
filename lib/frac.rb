@@ -2,6 +2,7 @@ require "./lib/gcd.rb"
 
 class Frac
 	attr_reader :numerador, :denominador
+	include Comparable
 	def initialize(numerador, denominador)
 		mcd = gcd(numerador,denominador)
 		@numerador , @denominador = numerador/mcd, denominador/mcd
@@ -18,5 +19,9 @@ class Frac
 	def to_f()
 		@numerador.to_f/@denominador
 	end
+	def <=>(other)
+    	@numerador.to_f/@denominador <=> other.numerador.to_f/other.denominador
+    end
+
 end
 
