@@ -15,5 +15,8 @@ class Frac
 	def to_s()
 		"#{@numerador}/#{@denominador}"
 	end
+	def to_f()
+		@numerador.to_f/@denominador
+	end
 end
 
