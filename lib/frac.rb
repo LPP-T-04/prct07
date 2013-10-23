@@ -12,5 +12,8 @@ class Frac
 	def denom()
 		@denominador
 	end
+	def to_s()
+		"#{@numerador}/#{@denominador}"
+	end
 end
 
