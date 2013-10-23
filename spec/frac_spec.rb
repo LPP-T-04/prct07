@@ -45,5 +45,24 @@ describe Frac do
 		it "si dos fracciones son iguales" do
 			(@f1 == @f4).should be(true)
 		end
+		it "si una fraccion es menor que otra" do
+			(@f3 < @f1).should be(true)
+		end
+		it "si una fraccion es mayor que otra" do
+			(@f1 > @f3).should be(true)
+		end
+		it "si una fraccion es menor o igual que otra" do
+			(@f3 <= @f1).should be(true)
+		end
+		it "si una fraccion es mayor o igual que otra" do
+			(@f1 >= @f3).should be(true)
+		end
+		it "si una fraccion es menor o igual que otra" do
+			(@f1 <= @f4).should be(true)
+		end
+		it "si una fraccion es mayor o igual que otra" do
+			(@f1 >= @f4).should be(true)
+		end
 	end
+
 end
