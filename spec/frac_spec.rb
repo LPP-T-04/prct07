@@ -5,6 +5,7 @@ describe Frac do
 		@f1 = Frac.new(1,1)
 		@f2 = Frac.new(2,2)
 		@f3 = Frac.new(1,2)
+		@f4 = Frac.new(1,1)
 	end
 	describe "# almacenamiento del numerador y denominador." do
 		it "se almacena correctamente el numerador." do
@@ -38,6 +39,11 @@ describe Frac do
 	describe "# se debe imprimir" do
 		it " la fraccion en coma flotante" do
 			@f3.to_f.should eq(0.5)
+		end
+	end
+	describe "# se debe comparar" do
+		it "si dos fracciones son iguales" do
+			(@f1 == @f4).should be(true)
 		end
 	end
 end
