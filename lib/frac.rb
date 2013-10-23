@@ -6,4 +6,11 @@ class Frac
 		mcd = gcd(numerador,denominador)
 		@numerador , @denominador = numerador/mcd, denominador/mcd
 	end
+	def num()
+		@numerador
+	end
+	def denom()
+		@denominador
+	end
 end
+
