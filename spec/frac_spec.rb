@@ -9,6 +9,7 @@ describe Frac do
 		@f5 = Frac.new(-1,1)
 		@f6 = Frac.new(1,-1)
 		@f7 = Frac.new(-1,-1)
+		@f8 = Frac.new(2,1)
 	end
 	describe "# almacenamiento del numerador y denominador." do
 		it "se almacena correctamente el numerador." do
@@ -80,7 +81,10 @@ describe Frac do
 		it "siendo negativo numerador y denominador" do
 			(@f7.abs.should eq ("1/1"))
 		end
-
-
+	end
+	describe "se debe calcular" do
+		it "reciproco de una fraccion" do
+			(@f3.reciprocal.to_s.should eq (@f8.to_s))
+		end
 	end
 end
