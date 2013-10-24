@@ -64,4 +64,8 @@ class Frac
             end                    
         end
     end
+
+    def *(other)
+        Frac.new(@numerador * other.numerador, @denominador * other.denominador)
+    end
 end
