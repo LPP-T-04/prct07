@@ -13,6 +13,8 @@ describe Frac do
 		@f8 = Frac.new(2,1)
 		@f9 = Frac.new(4,2)
 		@f10 = Frac.new(3,1)
+		@f11 = Frac.new(5,3)
+		@f12 = Frac.new(1,3)
 	end
 	
 	describe "# almacenamiento del numerador y denominador." do
@@ -137,5 +139,11 @@ describe Frac do
 			(@f9./(@f2).to_s.should eq (@f8.to_s))
 		end
 	end
-
+=begin
+	describe "Se debe calcular " do
+		it "el resto de la division de dos fracciones y dar el resultado en forma reducida" do
+			(@f9.%(@f11).to_s.should eq (@f12.to_s))
+		end
+	end
+=end
 end
