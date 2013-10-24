@@ -33,5 +33,8 @@ class Frac
     		"#{-1 * @numerador}/#{-1 * @denominador}"
     	end  						
     end
+    def reciprocal()
+    	Frac.new(@denominador, @numerador)
+    end
 end
 
