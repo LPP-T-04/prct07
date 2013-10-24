@@ -45,20 +45,23 @@ class Frac
     	Frac.new(@denominador, @numerador)
     end
 
-    def -()
-    	if (@numerador > 0 && @denominador > 0)
-    		Frac.new(-1 * @numerador, @denominador)
-    	elsif (@numerador > 0 && @denominador < 0)
-    		Frac.new(@numerador, -1 * @denominador)
-    	elsif (@numerador < 0 && @denominador > 0)
-    		Frac.new(-1 * @numerador, @denominador)
-    	else (@numerador < 0 && @denominador < 0)
-    		Frac.new(@numerador, -1 * @denominador)
-    	end
-    end
-
     def +(other)
         Frac.new(@numerador*other.denominador + other.numerador*@denominador , @denominador*other.denominador)
     end
-end
 
+    def -(*other)
+        if (other[0].class == Frac)
+            Frac.new(@numerador*other[0].denominador - other[0].numerador*@denominador , @denominador*other[0].denominador)
+        else
+            if (@numerador > 0 && @denominador > 0)
+                Frac.new(-1 * @numerador, @denominador)
+            elsif (@numerador > 0 && @denominador < 0)
+                Frac.new(@numerador, -1 * @denominador)
+            elsif (@numerador < 0 && @denominador > 0)
+                Frac.new(-1 * @numerador, @denominador)
+            else (@numerador < 0 && @denominador < 0)
+                Frac.new(@numerador, -1 * @denominador)
+            end                    
+        end
+    end
+end

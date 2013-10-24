@@ -125,4 +125,5 @@ describe Frac do
 			(@f9.-(@f2).to_s.should eq (@f1.to_s))		
 		end
 	end
+
 end
