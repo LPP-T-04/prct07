@@ -126,4 +126,10 @@ describe Frac do
 		end
 	end
 
+	describe "Se debe multiplicar dos fracciones" do
+		it "y dar el resultado en forma reducida" do
+			(@f8.*(@f2).to_s.should eq (@f9.to_s))		
+		end
+	end
+
 end
