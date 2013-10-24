@@ -87,4 +87,9 @@ describe Frac do
 			(@f3.reciprocal.to_s.should eq (@f8.to_s))
 		end
 	end
+	describe "se debe calcular" do
+		it "el opuesto de una fraccion" do
+			(@f4.-.to_s.should eq (@f5.to_s))
+		end
+	end
 end
