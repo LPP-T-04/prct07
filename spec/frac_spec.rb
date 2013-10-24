@@ -10,6 +10,8 @@ describe Frac do
 		@f6 = Frac.new(1,-1)
 		@f7 = Frac.new(-1,-1)
 		@f8 = Frac.new(2,1)
+		@f9 = Frac.new(4,2)
+		@f10 = Frac.new(3,1)
 	end
 	describe "# almacenamiento del numerador y denominador." do
 		it "se almacena correctamente el numerador." do
@@ -101,4 +103,10 @@ describe Frac do
 			(@f7.-.to_s.should eq (@f5.to_s))
 		end
 	end
+	describe "Se debe sumar dos fracciones" do
+		it "y dar el resultado en forma reducida" do
+			(@f9.+(@f2).to_s.should eq (@f10.to_s))		
+		end
+	end
+
 end
