@@ -6,6 +6,7 @@ describe Frac do
 		@f2 = Frac.new(2,2)
 		@f3 = Frac.new(1,2)
 		@f4 = Frac.new(1,1)
+		@f5 = Frac.new(-1,1)
 	end
 	describe "# almacenamiento del numerador y denominador." do
 		it "se almacena correctamente el numerador." do
@@ -64,5 +65,12 @@ describe Frac do
 			(@f1 >= @f4).should be(true)
 		end
 	end
-
+	describe "se debe calcular el valor absoluto de una fraccion" do
+		it "siendo positiva" do
+			(@f1.abs.should eq("1/1"))
+		end
+		it "siendo negativa" do
+			(@f5.abs.should eq ("1/1"))
+		end
+	end
 end
