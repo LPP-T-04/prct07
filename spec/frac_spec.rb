@@ -132,4 +132,10 @@ describe Frac do
 		end
 	end
 
+	describe "Se debe dividir dos fracciones" do
+		it "y dar el resultado en forma reducida" do
+			(@f9./(@f2).to_s.should eq (@f4.to_s))
+		end
+	end
+
 end
