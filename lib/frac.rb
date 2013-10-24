@@ -22,6 +22,16 @@ class Frac
 	def <=>(other)
     	@numerador.to_f/@denominador <=> other.numerador.to_f/other.denominador
     end
-
+    def abs()
+    	if (@numerador > 0 && @denominador > 0)
+    		"#{@numerador}/#{@denominador}"
+    	elsif (@numerador > 0 && @denominador < 0)
+    		"#{@numerador}/#{-1 * @denominador}"
+    	elsif (@numerador < 0 && @denominador > 0)
+    		"#{-1 * @numerador}/#{@denominador}"
+    	else (@numerador < 0 && @denominador < 0)
+    		"#{-1 * @numerador}/#{-1 * @denominador}"
+    	end  						
+    end
 end
 
