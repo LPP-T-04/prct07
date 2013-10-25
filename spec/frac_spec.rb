@@ -87,16 +87,16 @@ describe Frac do
 	
 	describe "se debe calcular el valor absoluto de una fraccion" do
 		it "siendo positivo numerador y denominador" do
-			(@f4.abs.should eq("1/1")) # El valor absoluto debe ser "1/1"
+			(@f4.abs.should eq(@f1.to_s)) # El valor absoluto debe ser "1/1"
 		end
 		it "siendo negativo numerador" do
-			(@f5.abs.should eq ("1/1")) # El valor absoluto debe ser "1/1"
+			(@f5.abs.should eq (@f1.to_s)) # El valor absoluto debe ser "1/1"
 		end
 		it "siendo negativo denominador" do
-			(@f6.abs.should eq ("1/1")) # El valor absoluto debe ser "1/1"
+			(@f6.abs.should eq (@f1.to_s)) # El valor absoluto debe ser "1/1"
 		end
 		it "siendo negativo numerador y denominador" do
-			(@f7.abs.should eq ("1/1")) # El valor absoluto debe ser "1/1"
+			(@f7.abs.should eq (@f1.to_s)) # El valor absoluto debe ser "1/1"
 		end
 	end
 	

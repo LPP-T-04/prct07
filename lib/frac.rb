@@ -31,13 +31,13 @@ class Frac
     
     def abs() # Se calcula el valor absoluto de una fraccion.
     	if (@numerador > 0 && @denominador > 0)
-    		"#{@numerador}/#{@denominador}"
+    		Frac.new(@numerador, @denominador).to_s
     	elsif (@numerador > 0 && @denominador < 0)
-    		"#{@numerador}/#{-1 * @denominador}"
+    		Frac.new(@numerador, -1 * @denominador).to_s
     	elsif (@numerador < 0 && @denominador > 0)
-    		"#{-1 * @numerador}/#{@denominador}"
+    		Frac.new(-1 * @numerador, @denominador).to_s
     	else (@numerador < 0 && @denominador < 0)
-    		"#{-1 * @numerador}/#{-1 * @denominador}"
+    		Frac.new(-1 * @numerador,-1 * @denominador).to_s
     	end  						
     end
     
