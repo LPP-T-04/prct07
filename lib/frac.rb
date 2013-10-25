@@ -77,10 +77,10 @@ class Frac
         result = self./(other)
         result = (result.numerador%result.denominador).to_i
     end
-
+=begin
     def prct(other)
         result = self.*(other)
         result.abs
     end
-
+=end
 end

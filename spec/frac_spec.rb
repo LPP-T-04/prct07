@@ -153,16 +153,16 @@ describe Frac do
 
 	describe "Se debe calcular el valor absoluto de la multiplicacionde dos fracciones." do
 		it "La primera positiva y la segunda positiva." do
-			@f11.prct(@f3).should eq (@f14.to_s)
+			(@f11.*(@f3)).abs.should eq (@f14.to_s)
 		end
 		it "La primera positiva y la segunda negativa." do
-			@f11.prct(@f13).should eq (@f14.to_s)
+			(@f11.*(@f13)).abs.should eq (@f14.to_s)
 		end
 		it "La primera negativa y la segunda positiva." do
-			@f13.prct(@f11).should eq (@f14.to_s)
+			(@f13.*(@f11)).abs.should eq (@f14.to_s)
 		end
 		it "La primera negativa y la segunda negativa." do
-			@f15.prct(@f13).should eq (@f14.to_s)
+			(@f15.*(@f13)).abs.should eq (@f14.to_s)
 		end
 	end
 end
