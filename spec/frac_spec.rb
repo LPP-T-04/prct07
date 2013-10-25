@@ -152,7 +152,7 @@ describe Frac do
 
 	describe "Se debe calcular " do
 		it "el valor absoluto de la multiplicacionde dos fracciones." do
-			@f13.prct(@f11).shoud eq (@f14)
+			@f13.prct(@f11).should eq (@f14.to_s)
 		end
 	end
 end
