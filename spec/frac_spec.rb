@@ -15,6 +15,8 @@ describe Frac do
 		@f10 = Frac.new(3,1)
 		@f11 = Frac.new(5,3)
 		@f12 = Frac.new(1,3)
+		@f13 = Frac.new(-1,2)
+		@f14 = Frac.new(5,6)
 	end
 	
 	#Lista de espectativas que deben cumplirse:
@@ -145,6 +147,12 @@ describe Frac do
 	describe "Se debe calcular " do
 		it "el resto de la division de dos fracciones y dar el resultado en forma reducida" do
 			(@f3.%(@f11).to_i.should eq (3)) # Se comprueba el resto al dividir dos fracciones
+		end
+	end
+
+	describe "Se debe calcular " do
+		it "el valor absoluto de la multiplicacionde dos fracciones." do
+			@f13.prct(@f11).shoud eq (@f14)
 		end
 	end
 end
