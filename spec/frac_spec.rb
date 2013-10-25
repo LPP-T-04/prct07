@@ -17,6 +17,7 @@ describe Frac do
 		@f12 = Frac.new(1,3)
 		@f13 = Frac.new(-1,2)
 		@f14 = Frac.new(5,6)
+		@f15 = Frac.new(-5,3)
 	end
 	
 	#Lista de espectativas que deben cumplirse:
@@ -150,9 +151,18 @@ describe Frac do
 		end
 	end
 
-	describe "Se debe calcular " do
-		it "el valor absoluto de la multiplicacionde dos fracciones." do
+	describe "Se debe calcular el valor absoluto de la multiplicacionde dos fracciones." do
+		it "La primera positiva y la segunda positiva." do
+			@f11.prct(@f3).should eq (@f14.to_s)
+		end
+		it "La primera positiva y la segunda negativa." do
+			@f11.prct(@f13).should eq (@f14.to_s)
+		end
+		it "La primera negativa y la segunda positiva." do
 			@f13.prct(@f11).should eq (@f14.to_s)
+		end
+		it "La primera negativa y la segunda negativa." do
+			@f15.prct(@f13).should eq (@f14.to_s)
 		end
 	end
 end
