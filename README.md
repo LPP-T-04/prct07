@@ -52,15 +52,13 @@ rake thtml # Run tests with format: html
 Aclaraciones:
 =============
 
-La ejecución del programa es:
+La ejecución del programa se describe a continuación:  
+Por defecto se ejecuta rake spec.Las alternativas podemos verlas con rake -T y son:
 
-Por defecto se ejecuta rake spec. Las alternativas podemos verlas con rake -T y son:
+rake spec  # Ejecuta las espectativas de la clase Frac.  
+rake bin   # Ejecuta el programa principal.  
+rake doc   # Ejecuta las espectativas con documentacion.  
+rake html  # Ejecuta las espectativas en formato html.  
 
-rake spec  # Ejecuta las espectativas de la clase Frac.
-rake bin   # Ejecuta el programa principal.
-rake doc   # Ejecuta las espectativas con documentacion.
-rake html  # Ejecuta las espectativas en formato html.
-
-El Link de descarga del repositorio es:
-
+El Link de descarga del repositorio es:  
 SSH: git@bitbucket.org:alu0100596113/prct06.git
