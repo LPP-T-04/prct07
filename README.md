@@ -48,3 +48,19 @@ rake test  # Run tests with --format documentation
 rake thtml # Run tests with format: html
 
 4.-) Indique la URL (HTTP) del repositorio bitbucket (privado) que ha desarrollado. Recuerde que ha de añadir a los profesores de la asignatura como colaboradores (vea las instrucciones en el tutorial).
+
+Aclaraciones:
+=============
+
+La ejecución del programa es:
+
+Por defecto se ejecuta rake spec. Las alternativas podemos verlas con rake -T y son:
+
+rake spec  # Ejecuta las espectativas de la clase Frac.
+rake bin   # Ejecuta el programa principal.
+rake doc   # Ejecuta las espectativas con documentacion.
+rake html  # Ejecuta las espectativas en formato html.
+
+El Link de descarga del repositorio es:
+
+SSH: git@bitbucket.org:alu0100596113/prct06.git
