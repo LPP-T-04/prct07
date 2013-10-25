@@ -142,7 +142,7 @@ describe Frac do
 
 	describe "Se debe calcular " do
 		it "el resto de la division de dos fracciones y dar el resultado en forma reducida" do
-			(@f3.%(@f11).to_s.should eq (@f10.to_s))
+			(@f3.%(@f11).to_s.should eq ("3"))
 		end
 	end
 end

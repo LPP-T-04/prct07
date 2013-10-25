@@ -65,11 +65,17 @@ class Frac
         end
     end
 
-    def *(other)
+    def *(other)9
         Frac.new(@numerador * other.numerador, @denominador * other.denominador)
     end
 
     def /(other)
         Frac.new(@numerador * other.denominador, @denominador * other.numerador)
+    end
+
+    def %(other)
+        result = self./(other)
+        #result = Frac.new(@numerador * other.denominador, @denominador * other.numerador)
+        result = (result.numerador%result.denominador).to_i
     end
 end
