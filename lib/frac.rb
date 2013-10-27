@@ -1,4 +1,4 @@
-require "./lib/gcd.rb"
+require "gcd.rb"
 # Definicion de la clase Frac
 class Frac
 	attr_reader :numerador, :denominador # Se definen set y get para acceder a las variables de la clase.

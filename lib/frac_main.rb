@@ -1,4 +1,4 @@
-require "./lib/frac.rb"
+require "frac.rb"
 
 def main
 	puts "Bienvenido al programa principal"

@@ -1,4 +1,4 @@
-require "lib/frac.rb"
+require "frac.rb"
 
 describe Frac do
 	#Tipos de datos Frac
