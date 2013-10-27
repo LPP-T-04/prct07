@@ -1,64 +1,46 @@
-TDD Frac
-========
+Práctica de Laboratorio #7 - VIRTUAL - EQUIPO
+===============================================
 
-Desarrollo dirigido por pruebas de la clase Fracción-
-______________________________________________________
+Descripción de la práctica:
+---------------------------
 
-Enunciado de la Práctica:
+Considere la clase Ruby para representar fracciones que ha implementado usando el Desarrollo dirigido por pruebas (Test Driven Development - TDD) usando como herramienta Rspec. 
 
-Considere el desarrollo de una clase Ruby para representar fracciones. Empiece desde cero, no reciclando código de las prácticas anteriores. La clave de esta práctica está en diseñar pruebas que dirijan el desarrollo y si reutiliza el desarrollo anterior estará haciéndolo mal.
+1.-) Realice las modificaciones oportunas para contemplar el uso del módulo Comparable.
 
-1.-) Esta práctica se tiene que realizar en equipo.
+Debido a que en la práctica anterior no se especificaba como realizar la comparación entre fracciones, ya se había implementado los métodos usando el módulo comparable. (Para la realización de este apartado no se ha modificado nada del código con respecto a la práctica anterior.)
 
-2.-) Cree una clase 'Fraccion' usando Desarrollo Dirigido por el Comportamiento (Behavior Driven Development - BDD) como caso particular del Desarrollo dirigido por pruebas (Test Driven Development - TDD) usando como herramienta Rspec. 
+2.-) La clase se ha de compilar con la herramienta Travis de integración continua. Con ella se comprueba la portabilidad de los desarrollos entre distintas plataformas y versiones de Ruby.
 
-Puede tomar como ejemplo la siguiente salida:
+Para ello realizar los siguientes pasos:
 
-Racional
-  Debe existir un numerador
-  Debe existir un denominador
-  Debe de estar en su forma reducida
-  Se debe invocar al metodo num() para obtener el numerador
-  Se debe invocar al metodo denom() para obtener el denominador
-  Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador
-  Se debe mostar por la consola la fraccion en formato flotante
-  Se debe comparar si dos fracciones son iguales con ==
-  Se debe calcular el valor absoluto de una fraccion con el metodo abs
-  Se debe calcular el reciproco de una fraccion con el metodo reciprocal
-  Se debe calcular el opuesto de una fraccion con -
-  Se debe sumar dos fracciones con + y dar el resultado de forma reducida
-  Se debe restar dos fracciones con - y dar el resultado de forma reducida
-  Se debe multiplicar dos fracciones con * y dar el resultado de forma reducida
-  Se debe dividir dos fracciones con / y dar el resultado de forma reducida
-  Se debe calcular el resto dos fracciones con % y dar el resultado de forma reducida
-  Se debe de poder comprobar si una fracion es menor que otra
-  Se debe de poder comprobar si una fracion es mayor que otra
-  Se debe de poder comprobar si una fracion es menor o igual que otra
-  Se debe de poder comprobar si una fracion es mayor o igual que otra
+2.1.-) Darse de alta en 'https://travis-ci.org/' y permitir que se acceda desde Github (poniendo a ON el proyecto).
 
-Finished in 0.00475 seconds
-20 examples, 0 failures
+2.2.) Crear un fichero '.travis.yml' que contenga el listado de plataformas sobre las que se quiere comprobar el correcto funcionamiento, por ejemplo:
 
-3.-) Añada un Rakefile que permita los siguientes objetivos:
+language: ruby
+rvm:
+  - 1.9.3
+  - jruby-18mode # JRuby in 1.8 mode
+  - jruby-19mode # JRuby in 1.9 mode
+  - rbx-18mode
+  - rbx-19mode
+  - 1.8.7
 
-    $ rake -T
+2.3.-) Crear un fichero 'Rakefile' que contenga, al menos:
 
-rake bin   # Run lib/frac_main.rb
-rake test  # Run tests with --format documentation
-rake thtml # Run tests with format: html
+$:.unshift File.dirname(__FILE__) + 'lib'
 
-4.-) Indique la URL (HTTP) del repositorio bitbucket (privado) que ha desarrollado. Recuerde que ha de añadir a los profesores de la asignatura como colaboradores (vea las instrucciones en el tutorial).
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
+task :default => :spec
 
-Aclaraciones:
-=============
+2.4.-) Crear un fichero 'Gemfile' que contenga al menos:
 
-La ejecución del programa se describe a continuación:  
-Por defecto se ejecuta rake spec.Las alternativas podemos verlas con rake -T y son:
+source 'https://rubygems.org'
 
-rake spec  # Ejecuta las espectativas de la clase Frac.  
-rake bin   # Ejecuta el programa principal.  
-rake doc   # Ejecuta las espectativas con documentacion.  
-rake html  # Ejecuta las espectativas en formato html.  
+gem 'rake'
+gem 'rspec'
 
-El Link de descarga del repositorio es:  
-SSH: git@bitbucket.org:alu0100596113/prct06.git
+3.-) Indique la URL (HTTP) del repositorio Github que ha desarrollado.
+
